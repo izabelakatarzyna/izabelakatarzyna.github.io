@@ -12,8 +12,12 @@
 * {
   box-sizing: border-box;
   a {
-    text-decoration: none;
-    color: inherit;
+    &:hover {
+      color: inherit !important;
+    }
+
+    text-decoration: none !important;
+    color: inherit !important;
     display: flex;
     align-items: center;
   }
@@ -122,6 +126,7 @@ form {
   padding: 0.1rem;
   margin: 0.1rem;
   background-color: #23484a;
+  box-shadow: 5px 10px 20px #000;
   gap: 5px;
   width: 50%;
   input,
@@ -138,7 +143,7 @@ form {
   header {
     width: 100%;
     h2 {
-      padding-top: 2rem;
+      padding-top: 6rem;
       color: #23484a;
       text-align: center;
     }
@@ -162,15 +167,20 @@ form {
     border-collapse: separate;
     th {
       background-color: var(--foreground-light);
+      width: 3rem;
+      height: 2rem;
     }
     td {
       background-color: var(--foreground-light);
       padding: 0.5rem;
+      width: 3rem;
+      height: 2rem;
     }
   }
   h2 {
     text-align: center;
     padding: 2px;
+    margin: 6px;
     width: 100%;
   }
 }
@@ -238,4 +248,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#carouselExampleSlidesOnly {
+  top: 8rem;
+  display: flex;
+  justify-content: center;
 }

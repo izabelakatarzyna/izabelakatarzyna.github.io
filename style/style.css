@@ -10,10 +10,13 @@
   box-sizing: border-box;
 }
 * a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none !important;
+  color: inherit !important;
   display: flex;
   align-items: center;
+}
+* a:hover {
+  color: inherit !important;
 }
 * .material-symbols-outlined {
   margin: 0.25rem;
@@ -120,6 +123,7 @@ form {
   padding: 0.1rem;
   margin: 0.1rem;
   background-color: #23484a;
+  box-shadow: 5px 10px 20px #000;
   gap: 5px;
   width: 50%;
 }
@@ -139,7 +143,7 @@ form textarea {
   width: 100%;
 }
 .wrapper header h2 {
-  padding-top: 2rem;
+  padding-top: 6rem;
   color: #23484a;
   text-align: center;
 }
@@ -160,14 +164,19 @@ form textarea {
 }
 .wrapper table th {
   background-color: var(--foreground-light);
+  width: 3rem;
+  height: 2rem;
 }
 .wrapper table td {
   background-color: var(--foreground-light);
   padding: 0.5rem;
+  width: 3rem;
+  height: 2rem;
 }
 .wrapper h2 {
   text-align: center;
   padding: 2px;
+  margin: 6px;
   width: 100%;
 }
 
@@ -232,4 +241,10 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#carouselExampleSlidesOnly {
+  top: 8rem;
+  display: flex;
+  justify-content: center;
 }
