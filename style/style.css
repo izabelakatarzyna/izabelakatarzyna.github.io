@@ -122,14 +122,14 @@ form {
   flex-direction: column;
   padding: 0.1rem;
   margin: 0.1rem;
-  background-color: #23484a;
-  box-shadow: 5px 10px 20px #000;
   gap: 5px;
   width: 50%;
 }
-form input,
-form textarea {
+form input textarea {
   padding: 10px;
+}
+form .btn {
+  background-color: #23484a;
 }
 
 .wrapper {
@@ -179,6 +179,39 @@ form textarea {
   margin: 6px;
   width: 100%;
 }
+.wrapper .projects {
+  border: 2px dashed red;
+}
+.wrapper .projects .projectsWrapper {
+  border: 2px dashed blue;
+  display: flex;
+}
+.wrapper .projects .projectsWrapper .project {
+  border: 2px dashed green;
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 30%;
+}
+.wrapper .projects .projectsWrapper .project header {
+  border: 5px dashed pink;
+  z-index: -1;
+  position: relative;
+}
+.wrapper .projects .projectsWrapper .project header h3 {
+  margin: 0;
+}
+.wrapper .projects .projectsWrapper .project header p {
+  opacity: 0;
+  display: none;
+}
+.wrapper .projects .projectsWrapper .project img {
+  border: 5px dashed black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 
 footer {
   border: 2px;
@@ -206,14 +239,8 @@ footer p {
   display: flex;
   justify-items: first baseline;
   padding: 1rem;
-  border: 2px #23484a;
+  border: 2px #000;
   box-shadow: 5px 10px 20px #000;
-}
-
-.button {
-  border-radius: 10px;
-  display: flex;
-  width: 70px 20px;
 }
 
 @media (min-width: 768px) {
@@ -237,14 +264,9 @@ footer p {
     padding: 0.3rem;
   }
 }
-.carousel slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #carouselExampleSlidesOnly {
   top: 8rem;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
