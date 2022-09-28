@@ -31,9 +31,11 @@ body {
   margin: 0;
   min-height: 1000px;
   font-family: "Montserrat", sans-serif;
+  /*.bodyHeader nav {
+    }*/
 }
-
-.bodyHeader {
+body .bodyHeader {
+  z-index: 2;
   background-color: var(--background-light);
   display: flex;
   justify-content: space-between;
@@ -43,38 +45,34 @@ body {
   top: 0;
   box-shadow: 2px 5px 10px #000;
 }
-
-/*.bodyHeader nav {
-    }*/
-h1 {
+body h1 {
   /* jeśli podajemy 2 wartości : poz y, poz x */
   margin: 6px 10px;
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   text-align: center;
   color: #23484a;
 }
-
-nav {
+body nav {
   /* warunek, wyłapujący wyświetlanie na komputerze */
 }
-nav #toggler {
+body nav #toggler {
   display: none;
 }
-nav #toggler:checked ~ ul {
+body nav #toggler:checked ~ ul {
   right: 0;
 }
-nav #toggler:checked ~ label div:nth-child(1) {
+body nav #toggler:checked ~ label div:nth-child(1) {
   transform: rotate(45deg);
   top: calc(50% - 1px);
 }
-nav #toggler:checked ~ label div:nth-child(2) {
+body nav #toggler:checked ~ label div:nth-child(2) {
   opacity: 0;
 }
-nav #toggler:checked ~ label div:nth-child(3) {
+body nav #toggler:checked ~ label div:nth-child(3) {
   transform: rotate(-45deg);
   top: calc(50% - 1px);
 }
-nav label {
+body nav label {
   /*border: 5px dashed red;*/
   width: 2rem;
   height: 2rem;
@@ -83,134 +81,158 @@ nav label {
   right: 0;
   margin: 0.15rem;
 }
-nav label div {
+body nav label div {
   height: 2px;
   width: 80%;
   background-color: #000;
   position: absolute;
   transition: 0.2s;
 }
-nav label div:nth-child(1) {
+body nav label div:nth-child(1) {
   top: calc(22% - 1px);
 }
-nav label div:nth-child(2) {
+body nav label div:nth-child(2) {
   top: calc(50% - 1px);
 }
-nav label div:nth-child(3) {
+body nav label div:nth-child(3) {
   top: calc(78% - 1px);
 }
-nav ul {
+body nav ul {
+  position: fixed;
+  flex-direction: column;
   background-color: var(--foreground-light);
   list-style-type: none;
   margin: 0;
   padding: 2rem;
   display: flex;
-  position: fixed;
   right: -100%;
-  /*top: 3rem;*/
-  top: 2.5rem;
-  height: calc(100% - 3.5rem);
+  top: 2.1rem;
+  height: calc(100% - 2.1rem);
   transition: 0.5s;
-  flex-direction: column;
 }
-nav ul li {
+body nav ul li {
+  top: 0;
+  left: 0;
   margin: 0.3rem;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  padding: 0.1rem;
-  margin: 0.1rem;
-  gap: 5px;
-  width: 50%;
-}
-form input textarea {
-  padding: 10px;
-}
-form .btn {
-  background-color: #23484a;
-}
-
-.wrapper {
+body .wrapper {
   /* border:5px dashed pink; */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3.5rem 0.5rem 0 0.5rem;
 }
-.wrapper header {
+body .wrapper header {
   width: 100%;
 }
-.wrapper header h2 {
+body .wrapper header h2 {
   padding-top: 6rem;
   color: #23484a;
   text-align: center;
 }
-.wrapper .content p {
+body .wrapper .content p {
   margin: 0;
   margin-bottom: 2rem;
   padding: 0.5rem;
   line-height: 1.2rem;
 }
-.wrapper .tableWrapper {
-  padding: 0 2rem;
+body .wrapper .content img {
+  max-width: 100%;
 }
-.wrapper table {
+body .wrapper .tableWrapper {
+  padding: 0 1rem;
+}
+body .wrapper table {
   box-shadow: 5px 10px 20px #000;
-  width: 50%;
+  width: 100%;
   background-color: #23484a;
   border-collapse: separate;
 }
-.wrapper table th {
-  background-color: var(--foreground-light);
-  width: 3rem;
-  height: 2rem;
+body .wrapper table tr {
+  background: var(--foreground-light);
 }
-.wrapper table td {
-  background-color: var(--foreground-light);
-  padding: 0.5rem;
-  width: 3rem;
-  height: 2rem;
+body .wrapper table tr:nth-child(even) {
+  background: var(--foreground-lighter);
 }
-.wrapper h2 {
+body .wrapper table tr th {
+  background-color: var(--foreground-dark);
+  padding: 0, 5rem;
+}
+body .wrapper table tr td {
+  padding: 0, 5rem;
+}
+body h2 {
   text-align: center;
   padding: 2px;
   margin: 6px;
   width: 100%;
 }
-.wrapper .projects {
-  border: 2px dashed red;
-}
-.wrapper .projects .projectsWrapper {
-  border: 2px dashed blue;
+body .projects .projectsWrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.wrapper .projects .projectsWrapper .project {
-  border: 2px dashed green;
+body .projects .projectsWrapper .project {
+  cursor: pointer;
   position: relative;
   aspect-ratio: 1/1;
   width: 30%;
+  margin: 0.3rem;
+  max-width: 10rem;
 }
-.wrapper .projects .projectsWrapper .project header {
-  border: 5px dashed pink;
-  z-index: -1;
+body .projects .projectsWrapper .project header {
+  background-color: rgba(255, 255, 255, 0.745);
+  z-index: 1;
   position: relative;
 }
-.wrapper .projects .projectsWrapper .project header h3 {
+body .projects .projectsWrapper .project header h3 {
   margin: 0;
 }
-.wrapper .projects .projectsWrapper .project header p {
+body .projects .projectsWrapper .project header p {
   opacity: 0;
   display: none;
 }
-.wrapper .projects .projectsWrapper .project img {
+body .projects .projectsWrapper .project img {
   border: 5px dashed black;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+}
+body .projects .display ul {
+  border: 4px dashed darkcyan;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+body .projects .display ul li {
+  list-style-type: none;
+  border: 2px dashed red;
+}
+body .projects .display ul article {
+  position: relative;
+  display: inline-block;
+}
+body .projects .display ul article .displayContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  text-align: right;
+}
+body .projects .display ul article .displayContent h3,
+body .projects .display ul article .displayContent p {
+  margin: 0;
+  background-color: #deeeee;
+  padding: 0.5rem 1.5rem;
+}
+body .projects .display ul article img {
+  max-height: 40vh;
 }
 
 footer {
@@ -237,10 +259,29 @@ footer p {
 
 .contact {
   display: flex;
-  justify-items: first baseline;
+  justify-content: center;
   padding: 1rem;
   border: 2px #000;
   box-shadow: 5px 10px 20px #000;
+}
+
+form {
+  display: flex;
+  padding: 0.1rem;
+  margin: 0.1rem;
+  gap: 5px;
+  width: 50%;
+}
+form input textarea {
+  padding: 10px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.contact-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
