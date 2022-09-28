@@ -246,70 +246,62 @@ body {
       margin: 0;
     }
   }
-  contact {
+  .contact {
     display: flex;
-    justify-items: first baseline;
+    //justify-items: first baseline;
+    justify-content: center;
     padding: 1rem;
     border: 2px #000;
     box-shadow: 5px 10px 20px #000;
   }
   form {
     display: flex;
-    flex-direction: column;
+    //flex-direction: column;
     padding: 0.1rem;
     margin: 0.1rem;
     gap: 5px;
     width: 50%;
-    .material-symbols-outlined {
-      width: 130px !important;
-    }
-    input textarea {
-      padding: 10px;
-      width: 100%;
-      border-radius: 2px;
-    }
-    .mb-3 form-check {
-      width: 100%;
-    }
-    .types {
-      width: 100% !important;
-    }
-    .btn {
-      background-color: #23484a;
-      color: white !important;
-    }
   }
-
-  @media (min-width: 768px) {
-    body {
-      .bodyHeader nav {
-        ul {
-          /* display:none; */
-          flex-direction: row;
-          position: static;
-        }
-        label {
-          display: none;
-        }
-      }
-      .wrapper {
+  input textarea {
+    padding: 10px;
+    width: 100%;
+    border-radius: 2px;
+  }
+}
+.contact-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  body {
+    .bodyHeader nav {
+      ul {
+        /* display:none; */
         flex-direction: row;
-        &:nth-child(odd) {
-          flex-direction: row-reverse;
-        }
+        position: static;
+      }
+      label {
+        display: none;
+      }
+    }
+    .wrapper {
+      flex-direction: row;
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
 
-        * {
-          flex: 1;
-          text-align: center;
-          padding: 0.3rem;
-        }
+      * {
+        flex: 1;
+        text-align: center;
+        padding: 0.3rem;
       }
     }
   }
-  #carouselExampleSlidesOnly {
-    top: 8rem;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-  }
+}
+#carouselExampleSlidesOnly {
+  top: 8rem;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
