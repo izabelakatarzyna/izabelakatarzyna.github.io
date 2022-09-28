@@ -280,8 +280,13 @@ form input textarea {
 
 .contact-2 {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 40px;
+  padding-top: 10px;
+}
+.contact-2 .material-symbols-outlined {
+  font-size: 50px !important;
 }
 
 @media (min-width: 768px) {
