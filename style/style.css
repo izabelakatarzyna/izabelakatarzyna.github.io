@@ -48,9 +48,9 @@ body .bodyHeader {
 body h1 {
   /* jeśli podajemy 2 wartości : poz y, poz x */
   margin: 6px 10px;
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  text-align: center;
-  color: #23484a;
+  text-align: left;
+  color: black;
+  font-weight: 700;
 }
 body nav {
   /* warunek, wyłapujący wyświetlanie na komputerze */
@@ -127,7 +127,7 @@ body .wrapper header {
 }
 body .wrapper header h2 {
   padding-top: 6rem;
-  color: #23484a;
+  color: rgb(254, 126, 0);
   text-align: center;
 }
 body .wrapper .content p {
@@ -143,9 +143,8 @@ body .wrapper .tableWrapper {
   padding: 0 1rem;
 }
 body .wrapper table {
-  box-shadow: 5px 10px 20px #000;
   width: 100%;
-  background-color: #23484a;
+  background-color: white;
   border-collapse: separate;
 }
 body .wrapper table tr {
@@ -155,17 +154,23 @@ body .wrapper table tr:nth-child(even) {
   background: var(--foreground-lighter);
 }
 body .wrapper table tr th {
-  background-color: var(--foreground-dark);
   padding: 0, 5rem;
+  color: black;
 }
 body .wrapper table tr td {
   padding: 0, 5rem;
+}
+body .wrapper table tr td .material-symbols-outlined {
+  color: rgb(254, 126, 0);
+  font-size: 30px;
 }
 body h2 {
   text-align: center;
   padding: 2px;
   margin: 6px;
   width: 100%;
+  color: rgb(254, 126, 0);
+  font-weight: 600;
 }
 body .projects .projectsWrapper {
   display: flex;
@@ -198,9 +203,6 @@ body .projects .projectsWrapper .project img {
   top: 0;
   width: 100%;
   height: 100%;
-}
-body .projects .display {
-  border: 5px dashed blueviolet;
 }
 body .projects .display ul {
   display: flex;
@@ -292,6 +294,7 @@ form input textarea {
 }
 .contact-2 .material-symbols-outlined {
   font-size: 50px !important;
+  color: rgb(254, 126, 0) !important;
 }
 
 @media (min-width: 768px) {
@@ -320,8 +323,10 @@ form input textarea {
   display: flex !important;
   justify-content: center !important;
   z-index: 1;
+  margin: 10px 20px;
 }
 #carouselExampleSlidesOnly .carousel-inner {
   display: flex !important;
   justify-content: center !important;
+  margin: -5px;
 }

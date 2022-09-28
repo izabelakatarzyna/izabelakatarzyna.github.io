@@ -49,9 +49,9 @@ body {
   h1 {
     /* jeśli podajemy 2 wartości : poz y, poz x */
     margin: 6px 10px;
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-    text-align: center;
-    color: #23484a;
+    text-align: left;
+    color: black;
+    font-weight: 700;
   }
 
   nav {
@@ -133,7 +133,7 @@ body {
       width: 100%;
       h2 {
         padding-top: 6rem;
-        color: #23484a;
+        color: rgb(254, 126, 0);
         text-align: center;
       }
     }
@@ -153,21 +153,25 @@ body {
       padding: 0 1rem;
     }
     table {
-      box-shadow: 5px 10px 20px #000;
       width: 100%;
-      background-color: #23484a;
+      background-color: white;
       border-collapse: separate;
+
       tr {
         background: var(--foreground-light);
         &:nth-child(even) {
           background: var(--foreground-lighter);
         }
         th {
-          background-color: var(--foreground-dark);
           padding: 0, 5rem;
+          color: black;
         }
         td {
           padding: 0, 5rem;
+          .material-symbols-outlined {
+            color: rgb(254, 126, 0);
+            font-size: 30px;
+          }
         }
       }
     }
@@ -177,6 +181,8 @@ body {
     padding: 2px;
     margin: 6px;
     width: 100%;
+    color: rgb(254, 126, 0);
+    font-weight: 600;
   }
   .projects {
     .projectsWrapper {
@@ -212,7 +218,6 @@ body {
       }
     }
     .display {
-      border: 5px dashed blueviolet;
       ul {
         display: flex;
         flex-direction: column;
@@ -305,6 +310,7 @@ form {
   padding-top: 30px;
   .material-symbols-outlined {
     font-size: 50px !important;
+    color: rgb(254, 126, 0) !important;
   }
 }
 @media (min-width: 768px) {
@@ -338,8 +344,10 @@ form {
   display: flex !important;
   justify-content: center !important;
   z-index: 1;
+  margin: 10px 20px;
   .carousel-inner {
     display: flex !important;
     justify-content: center !important;
+    margin: -5px;
   }
 }
