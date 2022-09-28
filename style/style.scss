@@ -4,7 +4,7 @@
   -ms-transform: rotate($deg);
 }
 :root {
-  --foreground-dark: #2b47e3;
+  --foreground-dark: #060606;
   --foreground-light: #ffff;
   --background-dark: #deeeee;
   --background-light: #ffff;
@@ -335,7 +335,11 @@ form {
 }
 #carouselExampleSlidesOnly {
   top: 8rem;
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
   z-index: 1;
+  .carousel-inner {
+    display: flex !important;
+    justify-content: center !important;
+  }
 }

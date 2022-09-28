@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --foreground-dark: #2b47e3;
+  --foreground-dark: #060606;
   --foreground-light: #ffff;
   --background-dark: #deeeee;
   --background-light: #ffff;
@@ -317,7 +317,11 @@ form input textarea {
 }
 #carouselExampleSlidesOnly {
   top: 8rem;
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
   z-index: 1;
+}
+#carouselExampleSlidesOnly .carousel-inner {
+  display: flex !important;
+  justify-content: center !important;
 }
