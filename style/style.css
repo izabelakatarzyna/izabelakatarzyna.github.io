@@ -311,6 +311,10 @@ form input textarea {
   }
   body .wrapper:nth-child(odd) {
     flex-direction: row-reverse;
+    background: black;
+  }
+  body .wrapper:nth-child(odd) p {
+    color: white;
   }
   body .wrapper * {
     flex: 1;

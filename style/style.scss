@@ -329,6 +329,10 @@ form {
       flex-direction: row;
       &:nth-child(odd) {
         flex-direction: row-reverse;
+        background: black;
+        p {
+          color: white;
+        }
       }
 
       * {
