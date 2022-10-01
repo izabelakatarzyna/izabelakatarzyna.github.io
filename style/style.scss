@@ -126,13 +126,13 @@ body {
   .wrapper {
     /* border:5px dashed pink; */
     display: flex;
-    flex-direction: column;
+    //flex-direction: column;
     align-items: center;
-    padding: 3.5rem 0.5rem 0 0.5rem;
+    padding: 5rem 0rem;
     header {
       width: 100%;
       h2 {
-        padding-top: 6rem;
+        //padding-top: 6rem;
         color: rgb(254, 126, 0);
         text-align: center;
       }

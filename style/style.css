@@ -118,15 +118,13 @@ body nav ul li {
 body .wrapper {
   /* border:5px dashed pink; */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 3.5rem 0.5rem 0 0.5rem;
+  padding: 5rem 0rem;
 }
 body .wrapper header {
   width: 100%;
 }
 body .wrapper header h2 {
-  padding-top: 6rem;
   color: rgb(254, 126, 0);
   text-align: center;
 }
